@@ -29,8 +29,37 @@ Pour mettre à jour la suite foundry : `foundryup`
 
 Pour connaître la version de forge installée : `forge --version`
 
+Pour créer la base d'un projet : `forge init`
+
 ###
 
 Notre smart contrat va être créé avec OpenZepelin :
 
     forge install OpenZeppelin/openzeppelin-contracts
+
+
+## Utilisation
+
+Buil d'abord le smart contrat :
+
+    forge build
+
+Modifier le fichier .env en ajoutant :
+
+* La private Key
+* Une API key obtenue sur https://sepolia.uniscan.xyz/
+
+Puis ajouter la variable :
+
+    source .env
+
+Le tester :
+
+    forge test
+
+code :
+
+forge script script/deployMyToken.s.sol:DeployMyToken \
+    --rpc-url unichain \
+    --broadcast \
+    -vvvv
