@@ -12,9 +12,14 @@ Ce workshop est divisé en trois parties :
 
 ## WSL on Windows
 
-On installe d'abord l'extension requise.
+On installe d'abord l'outil requis.
 
 Pour ouvrir Visual Studio Code dans WSL : `code .`
+
+Deux extensions nécessaires :
+
+1. Github
+2. Solidity
 
 ## Forge
 
